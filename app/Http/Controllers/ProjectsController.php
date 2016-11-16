@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Project;
 
 class ProjectsController extends Controller
 {
-    //
+    public function show()
+    {
+        $projects = Project::all();
+        return view('projects', compact('projects'));
+    }
 }

@@ -19,17 +19,11 @@
 
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
-
+$factory->define(App\Project::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'biography' => 'lkdfjdslkkfjsdlfjdf',
-        'linkedIn_link' => 'https://linkedin.com',
-        'github_profile_link' => 'https://github.com',
-        'picture_path' => 'path/to/user/picture',
-        'remember_token' => str_random(10)
+        'description' => $faker->paragraph,
+        'link_to_github' =>
+            'https://www.github.com/' . 'profile-name/' . 'my-repo'
     ];
 });

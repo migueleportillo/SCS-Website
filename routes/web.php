@@ -15,19 +15,20 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('home');
 })->name('home');
 
 Route::get('news', function () {
-    return view('home.news');
+    return view('news');
 })->name('news');
 
-Route::get('projects', function(){
-    return view('home.projects');
-})->name('projects');
+Route::group(['prefix' => 'projects'], function () {
+    Route::get('', 'ProjectsController@show')
+        ->name('projects_show');
+});
 
 Route::get('about', function(){
-    return view('home.about');
+    return view('about');
 })->name('about');
 
 Auth::routes();

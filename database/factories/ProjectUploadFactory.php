@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -11,25 +10,19 @@
 |
 */
 
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
 /**
  * This is a template for how the fake data
  * will be create by the factory methods
  * in the various database seeder files
  */
 
-
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
-
+$factory->define(App\ProjectUploads::class, function (Faker\Generator $faker) {
+    $projects = \App\Project::orderByRaw("RAND()")->first();
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'biography' => 'lkdfjdslkkfjsdlfjdf',
-        'linkedIn_link' => 'https://linkedin.com',
-        'github_profile_link' => 'https://github.com',
-        'picture_path' => 'path/to/user/picture',
-        'remember_token' => str_random(10)
+        'pic_name' => $faker->name,
+        'file_path' => '/path/to/pic_file',
+        'project_id' => $projects->id
     ];
 });

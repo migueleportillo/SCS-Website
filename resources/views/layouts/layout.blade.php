@@ -12,6 +12,8 @@
     <link rel="stylesheet" href= {{ asset('css/agency.css') }}>
     <link rel="stylesheet" href= {{asset('css/containerStyle.css')}}>
     <script src={{asset('js/activeLinks.js')}}></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="st
+ylesheet" type="text/css">
     @yield('title')
 </head>
 <body>

@@ -5,7 +5,7 @@
 <head>
     <?php echo $__env->make('global_config', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <link rel="stylesheet" href= <?php echo e(asset('css/agency.css')); ?>>
-    <link rel="stylesheet" href= <?php echo e(asset('css/containerStyle.css')); ?>>
+    <link rel="stylesheet" href= <?php echo e(asset('css/homePage.css')); ?>>
     <script src=<?php echo e(asset('js/activeLinks.js')); ?>></script>
     <?php echo $__env->yieldContent('title'); ?>
 </head>

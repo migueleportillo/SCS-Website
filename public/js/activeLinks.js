@@ -1,6 +1,6 @@
 /*
  * Created by Blaise on 11/9/16
- * contributors: Blaise
+ * Contributors: Blaise
  */
 
 var activeL='#home';

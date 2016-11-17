@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class AboutController extends Controller
 {
-    //
+    public function show()
+    {
+        return view('about');
+    }
 }

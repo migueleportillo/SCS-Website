@@ -16,17 +16,13 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'HomeController@show')->name('home');
 
-Route::get('news', function () {
-    return view('news');
-})->name('news');
+Route::get('news', 'NewsController@show')->name('news');
 
 Route::group(['prefix' => 'projects'], function () {
     Route::get('', 'ProjectsController@show')
         ->name('projects_show');
 });
 
-Route::get('about', function(){
-    return view('about');
-})->name('about');
+Route::get('about', 'AboutController@show')->name('about');
 
 Auth::routes();

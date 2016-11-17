@@ -3,7 +3,10 @@
  * contributors: Blaise & Cassidy
  * Date: 11/9/16
  * Time: 11:29 PM
+ * ......
  */--}}
+
+
 @extends('layouts.layout')
 
 @section('title') <title>SCS | News</title>@stop

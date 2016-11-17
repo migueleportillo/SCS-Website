@@ -8,5 +8,9 @@ use App\Http\Requests;
 
 class NewsController extends Controller
 {
-    //
+
+    public function show()
+    {
+        return view('news');
+    }
 }

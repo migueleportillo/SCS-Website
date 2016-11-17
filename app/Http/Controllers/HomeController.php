@@ -6,23 +6,14 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+/*
+    // use this to force users to authenticate before visiting the page
     public function __construct()
     {
         $this->middleware('auth');
-    }
+    }*/
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+    public function show() {
         return view('home');
     }
 }

@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'HomeController@show')->name('home');
 
 Route::get('news', function () {
     return view('news');

@@ -12,5 +12,6 @@
  </script>
  <div>
      <h1>This is the projects</h1>
+     <text>These are our current projects. Please click the link to each member's name to see their projects.</text>
  </div>
 @stop
